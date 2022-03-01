@@ -1,0 +1,11 @@
+@use "../../utils" as *;
+
+.copyright {
+  background-color: var(--orange);
+  font-family: var(--font-questrial);
+  font-size: rem(22);
+  @include breakpoint-down(medium) {
+    font-size: rem(15);
+    padding: 10px 20px;
+  }
+}

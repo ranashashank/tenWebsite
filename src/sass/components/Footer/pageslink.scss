@@ -1,0 +1,21 @@
+@use "../../utils" as *;
+
+.col-pageslink {
+  display: flex;
+  @include breakpoint-down(medium) {
+    order: 3;
+    flex: 1;
+  }
+  .pageslink {
+    a {
+      font-size: rem(23);
+      font-family: var(--font-questrial);
+      text-shadow: rgb(0 0 0 / 40%) 0px 4px 5px;
+      color: #000;
+      display: block;
+      @include breakpoint-down(medium) {
+        font-size: rem(17);
+      }
+    }
+  }
+}

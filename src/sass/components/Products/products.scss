@@ -1,0 +1,26 @@
+@use "../../utils" as *;
+
+.courses-page-row {
+  display: flex;
+  min-height: 100vh;
+  font-family: var(--font-questrial);
+  .filter {
+    flex: 0.2;
+    color: #fff;
+    background-color: rgb(82, 82, 82);
+    padding: 10px;
+    min-width: 240px;
+    @include breakpoint-down(medium) {
+      display: none;
+    }
+  }
+
+  .products {
+    padding: 50px 0;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+}

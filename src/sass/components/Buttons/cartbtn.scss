@@ -1,0 +1,18 @@
+@use "../../utils" as *;
+
+.cart-btn {
+  background-color: var(--dark-red4);
+  padding: 9px 44px;
+  border-radius: 50px;
+  margin-right: 70px;
+
+  @include breakpoint-down(medium) {
+    margin-right: 0;
+    margin-top: 10px;
+    order: 2;
+  }
+  .cart-svg {
+    width: 24px;
+    height: 24px;
+  }
+}

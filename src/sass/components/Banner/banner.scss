@@ -1,0 +1,47 @@
+@use "../../utils" as *;
+
+.banner {
+  height: 100vh;
+  position: relative;
+  margin: 20px 0 40px;
+
+  @include breakpoint-down(medium) {
+    margin: 20px 0 15px;
+  }
+
+  @include breakpoint-down(medium) {
+    height: 40vh;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &-text {
+    position: absolute;
+    bottom: rem(50);
+    width: 100%;
+
+    @include breakpoint-down(medium) {
+      bottom: rem(15);
+    }
+
+    h1 {
+      color: var(--yellow);
+      font-size: rem(65);
+      font-weight: 600;
+      width: 75%;
+      margin: 0 auto;
+      font-family: var(--font-noticia);
+      text-shadow: rgb(0 0 0 / 40%) 0px 4px 5px;
+
+      @include breakpoint-down(medium) {
+        font-size: rem(29);
+        color: #fff;
+        width: 300px;
+      }
+    }
+  }
+}

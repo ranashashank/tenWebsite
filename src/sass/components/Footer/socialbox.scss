@@ -1,0 +1,24 @@
+@use "../../utils" as *;
+
+.col-social {
+  @include breakpoint-down(medium) {
+    order: 2;
+    flex: 1;
+  }
+  .socialbox {
+    display: flex;
+    justify-content: center;
+    @include breakpoint-down(medium) {
+      padding: 80px 0;
+    }
+
+    img {
+      width: rem(50);
+      margin-right: 25px;
+
+      @include breakpoint-down(medium) {
+        width: rem(24);
+      }
+    }
+  }
+}

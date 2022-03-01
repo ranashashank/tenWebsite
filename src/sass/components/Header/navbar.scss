@@ -1,0 +1,130 @@
+@use "../../utils" as *;
+
+.header-navbar {
+  width: 100%;
+  transform: translate(0px, -25px);
+
+  @include breakpoint-down(medium) {
+    transform: none;
+    margin-top: 20px;
+    padding-left: 20px;
+  }
+
+  .navbar {
+    @include breakpoint-down(small) {
+      opacity: 0;
+      height: 0;
+      width: 0 !important;
+      transition: background-color 0.5s;
+      padding: 0;
+    }
+    &.show {
+      width: auto !important;
+      height: auto;
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      background-color: #000;
+      .navbar-container {
+        .navbar-nav {
+          flex-direction: column;
+          .header-navbar-item {
+            padding: 50px 0;
+          }
+        }
+      }
+    }
+    &-container {
+      .navbar-nav {
+        flex-direction: row;
+      }
+    }
+    .close-icon {
+      display: none;
+      @include breakpoint-down(small) {
+        display: block;
+      }
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+    padding: 0;
+    display: none;
+    background-color: #fff;
+    border-radius: 10px;
+    @include breakpoint-down(small) {
+      display: block;
+      position: relative;
+      z-index: 2;
+    }
+    .navbar-icon {
+      padding: 20px 15px;
+      box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.14);
+      border-radius: 7px;
+      .line {
+        background-color: var(--btn-left);
+        height: 2px;
+        transform: rotate(-45deg);
+        transition: 0.2s;
+      }
+      .line1,
+      .line3 {
+        width: 17px;
+      }
+      .line2 {
+        width: 30px;
+        margin-left: 2px;
+        margin-top: 4px;
+      }
+      .line3 {
+        margin-left: 15px;
+        margin-top: 5px;
+      }
+      &.animate {
+        .line1 {
+          transform: rotate(135deg) translate(0px, -8px) !important;
+          // margin-left: 10px;
+        }
+        .line2 {
+          opacity: 0;
+        }
+        .line3 {
+          transform: rotate(45deg) translate(-11px, 0px);
+          margin-left: 14px;
+        }
+      }
+    }
+  }
+
+  &-item {
+    font-size: rem(25);
+    border-right: 1px solid lightgrey;
+    padding: 0px 20px;
+    cursor: pointer;
+    line-height: normal;
+    @include breakpoint-down(medium) {
+      border-right: none;
+    }
+
+    a {
+      color: #000 !important;
+      @include breakpoint-down(small) {
+        color: #fff !important;
+      }
+      &:hover {
+        color: var(--dark-red4) !important;
+      }
+    }
+
+    &:first-child {
+      a {
+        color: var(--dark-red2) !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@use "../../utils" as *;
+
+.aboutus-section {
+  font-family: var(--font-questrial);
+  background-color: var(--light-red);
+
+  h4 {
+    font-weight: bold;
+
+    @include breakpoint-down(medium) {
+      font-size: rem(24);
+    }
+  }
+
+  .row {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+
+    @include breakpoint-down(medium) {
+      padding: 0 !important;
+    }
+    .aboutus-text {
+      padding: 0;
+      h1 {
+        font-weight: 700;
+        font-size: rem(42);
+        line-height: 1.2em;
+        text-shadow: rgb(255 255 255 / 60%) 1px 1px 1px,
+          rgb(0 0 0 / 60%) -1px -1px 1px;
+
+        @include breakpoint-down(medium) {
+          font-size: rem(23);
+          width: 70%;
+          margin: 0 auto;
+        }
+      }
+      .btn {
+        padding: 8px 40px;
+        border: 2px solid black;
+        border-radius: unset;
+        font-weight: bold;
+        font-size: rem(20);
+        transition: 0.3s;
+
+        @include breakpoint-down(medium) {
+          margin: 20px 0 10px;
+        }
+
+        &:hover {
+          color: #fff !important;
+          background: #000;
+          border-color: #fff;
+        }
+      }
+    }
+    .aboutus-img {
+      padding: 0;
+      .img-container {
+        border: 2px solid black;
+        border-radius: 4px;
+
+        @include breakpoint-down(medium) {
+          max-width: 90%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

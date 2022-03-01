@@ -1,0 +1,65 @@
+@use "../../utils" as *;
+
+.testimonial-container {
+  width: 96%;
+  margin: 0 auto;
+
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+  &-title {
+    margin-bottom: 10px;
+    h1 {
+      color: var(--dark-red3);
+      font-size: rem(51);
+      font-family: var(--font-questrial);
+      margin: 0;
+      line-height: normal;
+    }
+  }
+
+  .slick-slider {
+    .slick-prev,
+    .slick-next {
+      z-index: 1;
+      fill: #fff;
+      stroke: white;
+      width: 14px;
+      height: 27px;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .slick-prev {
+      left: 43px;
+    }
+
+    .slick-next {
+      right: 43px;
+      transform: scaleX(-1);
+    }
+
+    .slide-container {
+      position: relative;
+
+      .testimonial-text {
+        height: 100%;
+        width: 78%;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: var(--font-noticia);
+        font-size: rem(27);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        text-align: center;
+      }
+    }
+  }
+}

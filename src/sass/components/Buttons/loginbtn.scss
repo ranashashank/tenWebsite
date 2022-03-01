@@ -1,0 +1,13 @@
+.login-btn {
+  display: flex;
+  border: 1px solid #000;
+  border-radius: 0;
+  padding: 10px 20px;
+  box-shadow: -0.73px 0.68px 4px 0px rgba(0, 0, 0, 0.6);
+  white-space: nowrap;
+  gap: 15px;
+  .profile-svg {
+    width: 22px;
+    height: 22px;
+  }
+}

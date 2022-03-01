@@ -1,0 +1,52 @@
+@use "../../utils" as *;
+
+.benefitbox {
+  background-color: #fafafa;
+  padding: rem(15);
+  max-width: 95%;
+
+  @include breakpoint-down(medium) {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  img {
+    width: 167px;
+    @include breakpoint-down(medium) {
+      width: 120px;
+      padding-top: 30px;
+    }
+  }
+
+  &-title {
+    // width: max-content;
+    h3 {
+      position: relative;
+      font-size: rem(26);
+      font-family: var(--font-noticia);
+      font-weight: 400;
+      padding-top: 10px;
+      margin-bottom: 1px;
+
+      @include breakpoint-down(medium) {
+        font-size: rem(19);
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  p {
+    font-family: var(--font-questrial);
+    padding: 20px 10px;
+  }
+}
+
+.underline {
+  width: 190px;
+  height: 4px;
+  background-color: #000;
+  margin: 0 auto;
+  @include breakpoint-down(medium) {
+    width: 100%;
+  }
+}

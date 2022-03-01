@@ -1,0 +1,81 @@
+@use "../../utils" as *;
+
+.welcome-section {
+  width: 100%;
+  background: url(https://static.wixstatic.com/media/dcca985fe5e148b1aea6744afd6af686.jpg/v1/fill/w_980,h_697,al_c,q_85,usm_0.66_1.00_0.01/dcca985fe5e148b1aea6744afd6af686.webp);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 20px 0;
+
+  @include breakpoint-down(medium) {
+    height: 50vh;
+  }
+
+  h2 {
+    font-size: rem(64);
+    color: var(--orange);
+    font-family: var(--font-cookie);
+    text-shadow: #c8c8c8 1px 1px 0px, #b4b4b4 0px 2px 0px, #a0a0a0 0px 3px 0px,
+      rgb(140 140 140 / 50%) 0px 4px 0px, #787878 0px 0px 0px,
+      rgb(0 0 0 / 50%) 0px 5px 10px;
+    font-weight: bold;
+
+    @include breakpoint-down(medium) {
+      font-size: rem(38);
+    }
+  }
+
+  h1 {
+    width: 100%;
+    font-size: rem(90);
+    color: var(--dark-yellow);
+    text-transform: uppercase;
+    font-family: var(--font-anton);
+    font-weight: 900;
+    font-style: italic;
+    text-shadow: #c8c8c8 1px 1px 0px, #b4b4b4 0px 2px 0px, #a0a0a0 0px 3px 0px,
+      rgb(140 140 140 / 50%) 0px 4px 0px, #787878 0px 0px 0px,
+      rgb(0 0 0 / 50%) 0px 5px 10px;
+    transform: rotateY(45deg);
+    letter-spacing: 0.1em;
+
+    @include breakpoint-down(medium) {
+      transform: rotateY(30deg);
+      font-size: rem(47);
+      letter-spacing: 0.2em;
+      line-height: 1.5em;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .line {
+    height: 4px;
+    width: 62px;
+    background-color: #fff;
+    margin: 100px auto 0;
+
+    @include breakpoint-down(medium) {
+      margin: 20px auto 0;
+    }
+  }
+
+  .btn {
+    background: linear-gradient(229deg, var(--btn-left), var(--btn-right));
+    font-family: helvetica, sans-serif;
+    color: #fff;
+    border-radius: 50px;
+    font-size: rem(14);
+    margin-bottom: 25px;
+
+    @include breakpoint-down(medium) {
+      padding-top: 10px !important;
+      padding-bottom: 10px !important;
+    }
+
+    &:hover {
+      background: linear-gradient(229deg, var(--btn-left), var(--btn-left));
+    }
+  }
+}

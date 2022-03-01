@@ -1,0 +1,83 @@
+@use "../../utils" as *;
+
+.newsletter {
+  &-title {
+    font-size: rem(18);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px 15px 8px;
+    margin-bottom: 0;
+  }
+  &-inputs {
+    justify-content: center;
+    gap: 10px;
+
+    input[type="text"] {
+      height: 50px;
+      width: 190px;
+      padding: 3px 3px 3px 6px;
+      font-family: arial, sans-serif;
+      border: 2px solid rgba(0, 0, 0, 0.45);
+      font-size: 13px;
+      outline: none;
+
+      @include breakpoint-down(medium) {
+        width: 281px;
+      }
+
+      &:hover {
+        border-color: #000;
+      }
+    }
+
+    #college {
+      order: 2;
+    }
+    #mobile {
+      order: 3;
+    }
+    #email {
+      order: 4;
+    }
+
+    .error {
+      border-color: red !important;
+      border-width: 1px !important;
+    }
+  }
+  .join-discord {
+    padding: 10px 0;
+
+    @include breakpoint-down(medium) {
+      text-align: center;
+    }
+    input[type="checkbox"] {
+      height: 18px;
+      width: 18px;
+      border-radius: 0 !important;
+      margin-right: 10px;
+      vertical-align: text-bottom;
+    }
+
+    label {
+      font-style: italic;
+      font-family: Georgia, serif;
+    }
+  }
+
+  .btn {
+    border: 2px solid #000;
+    border-radius: unset;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    padding: 0 40px;
+
+    @include breakpoint-down(medium) {
+      padding: 7px 33px;
+    }
+
+    &:hover {
+      background-color: var(--dark-red3);
+      border-color: var(--dark-red3);
+    }
+  }
+}

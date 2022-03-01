@@ -1,0 +1,51 @@
+@use "../../utils" as *;
+
+.courses {
+  .course {
+    .img-container {
+      position: relative;
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: 100% 70%;
+        @include breakpoint-down(medium) {
+          height: 40vh;
+        }
+      }
+
+      .course-text {
+        position: absolute;
+        top: 0;
+        padding: 80px 0 80px 80px;
+
+        @include breakpoint-down(medium) {
+          padding: 20px;
+          top: 30px;
+        }
+
+        h3 {
+          font-size: rem(30);
+          font-family: var(--font-questrial);
+          font-weight: bold;
+
+          @include breakpoint-down(medium) {
+            font-size: rem(26);
+          }
+        }
+
+        h1 {
+          font-size: rem(58);
+          font-family: var(--font-noticia);
+          color: var(--orange);
+          padding-top: 50px;
+
+          @include breakpoint-down(medium) {
+            font-size: rem(28);
+            padding-top: 0px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

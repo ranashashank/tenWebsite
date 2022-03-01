@@ -1,0 +1,45 @@
+@use "../../utils" as *;
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 440px;
+  color: #fff;
+  margin-left: auto;
+  transform: translateX(50px);
+  position: relative;
+
+  @include breakpoint-down(medium) {
+    transform: translateX(0);
+    min-width: 300px;
+  }
+
+  input {
+    flex: 1;
+    background-color: #000;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 12px 10px;
+    border-radius: 50px;
+    &::placeholder {
+      color: inherit;
+    }
+    &:hover,
+    &:focus,
+    &:hover + .search-svg,
+    &:focus + .search-svg {
+      background-color: rgb(255, 228, 236);
+      color: #000;
+    }
+  }
+
+  .search-svg {
+    position: absolute;
+    width: 14.4px;
+    height: 14.4px;
+    color: #fff;
+    right: 15px;
+  }
+}

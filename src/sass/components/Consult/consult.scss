@@ -1,0 +1,101 @@
+@use "../../utils" as *;
+
+.consult {
+  max-width: 87%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  height: 395px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 30px;
+
+  @include breakpoint-down(medium) {
+    max-width: 100%;
+    height: 40vh;
+  }
+
+  .video-container {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      background: rgba(54, 12, 12, 0.35);
+    }
+  }
+
+  .text-container {
+    font-family: var(--font-questrial);
+    padding: 20px;
+
+    h1 {
+      font-size: rem(64);
+      color: #fff;
+      padding: 20px;
+      text-shadow: #c8c8c8 1px 1px 0px, #b4b4b4 0px 2px 0px, #a0a0a0 0px 3px 0px,
+        rgb(140 140 140 / 50%) 0px 4px 0px, #787878 0px 0px 0px,
+        rgb(0 0 0 / 50%) 0px 5px 10px;
+
+      @include breakpoint-down(medium) {
+        font-size: rem(38);
+      }
+    }
+
+    a {
+      display: inline-block;
+      margin: 0 auto;
+      .btn {
+        display: flex;
+        background-color: var(--light-red);
+        font-size: rem(19);
+        border-radius: unset;
+        color: #fff;
+        transition: 0.2s;
+        width: 182px;
+        height: 62px;
+        white-space: nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        @include breakpoint-down(medium) {
+          height: 42px;
+          width: 160px;
+        }
+
+        &:hover {
+          color: #000;
+          background-color: #fff;
+          border: 1px solid #000;
+          font-size: rem(26);
+          text-shadow: 1.43px 3.73px 3px #a6a6a6;
+          @include breakpoint-down(medium) {
+            font-size: rem(19);
+          }
+
+          svg {
+            fill: #000;
+          }
+        }
+      }
+
+      svg {
+        width: 10px;
+        fill: #fff;
+      }
+    }
+  }
+}
